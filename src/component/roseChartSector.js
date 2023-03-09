@@ -76,6 +76,7 @@ export default function() {
 					series[i] = {
 						key: d.key,
 						value: d.value,
+						data: d.data,
 						innerRadius: yScale(innerRadius),
 						outerRadius: yScale(outerRadius)
 					};

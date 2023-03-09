@@ -5235,6 +5235,7 @@
 						series[i] = {
 							key: d.key,
 							value: d.value,
+							data: d.data,
 							innerRadius: yScale(innerRadius),
 							outerRadius: yScale(outerRadius)
 						};
@@ -6242,9 +6243,9 @@
 			var _dataTransform$summar = dataTransform(data).summary(),
 			    rowKeys = _dataTransform$summar.rowKeys,
 			    columnKeys = _dataTransform$summar.columnKeys,
-			    maxValue = _dataTransform$summar.maxValue;
+			    valueMax = _dataTransform$summar.valueMax;
 
-			var valueExtent = [0, maxValue];
+			var valueExtent = [0, valueMax];
 
 			if (typeof colorScale === "undefined") {
 				colorScale = d3.scaleOrdinal().domain(columnKeys).range(colors);
