@@ -5273,6 +5273,8 @@
 					dispatch.call("customValueMouseOver", this, d);
 				}).on("click", function (d) {
 					dispatch.call("customValueClick", this, d);
+				}).on("mouseleave", function (d) {
+					dispatch.call("customValueMouseOut", this, d);
 				}).merge(arcs).transition().ease(transition.ease).duration(transition.duration).attr("d", arc);
 
 				arcs.exit().transition().style("opacity", 0).remove();

@@ -111,6 +111,7 @@ export default function() {
 				.attr("fill", (d) => colorScale(d.key))
 				.on("mouseover", function(d) { dispatch.call("customValueMouseOver", this, d); })
 				.on("click", function(d) { dispatch.call("customValueClick", this, d); })
+				.on("mouseleave", function(d) { dispatch.call("customValueMouseOut", this, d); })
 				.merge(arcs)
 				.transition()
 				.ease(transition.ease)
